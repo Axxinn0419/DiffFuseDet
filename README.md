@@ -137,8 +137,6 @@ model = YOLOMM('ultralytics/cfg/models/yolo11n_DGCAFusion_GFEM.yaml')
 ```bash
 python valMM.py            # mAP50 / mAP50:95 for a trained multimodal model
 python valCOCO.py          # COCO-style evaluation against a dataset yaml
-python valsingle.py        # single-modality baselines
-python predictMM.py        # qualitative predictions
 ```
 
 `Params` and `GFLOPs` reported in the paper are obtained with `thop` (included in the environment).
