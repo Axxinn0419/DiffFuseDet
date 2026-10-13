@@ -27,12 +27,10 @@ NVIDIA Jetson Orin NX 16 GB (35.6 FPS, TensorRT FP16).
 ```
 .
 ├── train.py                 # single-modality (IR) training baseline        <!-- TODO: 确认用途/数据集 -->
-├── trainRT.py               # single-modality (RGB) RT-DETR baseline
 ├── trainMM.py               # multimodal training, M3FD street scenes
 ├── trainMM_kfold.py         # multimodal training with 10-fold cross-validation (VEDAI)
 ├── valMM.py                 # validation for a trained multimodal model
 ├── valCOCO.py               # COCO-style evaluation on a dataset yaml
-├── valsingle.py             # validation for single-modality baselines
 ├── predictMM.py             # inference / prediction with a trained multimodal model
 ├── GFEM.py                  # GFEM module definition
 ├── visGFEM.py               # feature-response visualization for the GFEM branches (Fig. 6)
@@ -48,14 +46,12 @@ NVIDIA Jetson Orin NX 16 GB (35.6 FPS, TensorRT FP16).
         ├── yolomm.yaml                          # dual-stream baseline (no GFEM, no DGA-Fusion)
         ├── yolomm_GFEM.yaml                     # baseline + GFEM
         ├── yolomm_DGAFUSION.yaml                     # baseline + DGA-Fusion
-        ├── yolo11n_DGCAFusion_GFEM.yaml         # full DiffFuseDet
+        ├── DiffFuseDet.yaml         # full DiffFuseDet
         ├── GFEM_FRE.yaml                        # GFEM internal-ablation variants
         ├── yolo11.yaml, yolo12.yaml, yolov10n.yaml, yolo26n.yaml, rtdetr-l.yaml   # comparison backbones
 ```
 
-<!-- TODO: 上面的模型配置 ↔ 论文图表对应关系请核对：
-     哪几个 yaml 对应 Table 5（GFEM 内部消融：spatial only / frequency only / both），
-     哪几个对应对比表中的 YOLOv10n / YOLOv11n / YOLOv12n / YOLO26n / RT-DETR 行。 -->
+
 
 ## Environment
 
